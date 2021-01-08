@@ -19,18 +19,18 @@ for (let i = 0; i < numbers.length; i++) {
     live.innerHTML += numbers[i].textContent;
   }
 }
-
+console.log(090);
 //oprator
 for (let i = 0; i < oprator.length; i++) {
   oprator[i].addEventListener("click", opratorFunction);
 
   function opratorFunction() {
     if (previous.innerHTML === "") {
-      previous.innerHTML = live.innerHTML;
+      previous.innerHTML = parseFloat(live.innerHTML);
     } else if(sign.innerHTML == ""){
-        previous.innerHTML = live.innerHTML;
+        previous.innerHTML = parseFloat(live.innerHTML);
     } else {
-        previous.innerHTML = previous.innerHTML + symbol + live.innerHTML;
+        previous.innerHTML = parseFloat(previous.innerHTML) + symbol + parseFloat(live.innerHTML);
     }
     live.innerHTML = "";
     sign.innerHTML = oprator[i].textContent;
