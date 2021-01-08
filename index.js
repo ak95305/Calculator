@@ -19,7 +19,8 @@ for (let i = 0; i < numbers.length; i++) {
     live.innerHTML += numbers[i].textContent;
   }
 }
-console.log(090);
+
+
 //oprator
 for (let i = 0; i < oprator.length; i++) {
   oprator[i].addEventListener("click", opratorFunction);
@@ -30,7 +31,7 @@ for (let i = 0; i < oprator.length; i++) {
     } else if(sign.innerHTML == ""){
         previous.innerHTML = parseFloat(live.innerHTML);
     } else {
-        previous.innerHTML = parseFloat(previous.innerHTML) + symbol + parseFloat(live.innerHTML);
+        previous.innerHTML = parseFloat(previous.innerHTML) +  symbol + parseFloat(live.innerHTML);
     }
     live.innerHTML = "";
     sign.innerHTML = oprator[i].textContent;
@@ -62,7 +63,7 @@ equal.addEventListener("click", equalFunction);
 
 function equalFunction() {
   previous.innerHTML += sign.innerHTML;
-  previous.innerHTML += live.innerHTML;
+  previous.innerHTML += parseFloat(live.innerHTML);
   sign.innerHTML = "";
   
   live.innerHTML = (eval(previous.innerHTML));
