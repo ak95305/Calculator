@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 100px 300px;
+}
+
+#display {
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+#number-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 300px;
+  height: 250px;
+}
+
+.plus {
+  grid-area: 4/4/6/5;
+}
+
+.ac {
+  grid-area: 1/1/2/3;
+}
+
+#previous {
+  width: 290px;
+  height: 30px;
+  font-size: 15px;
+  text-align: right;
+}
+
+#live {
+  width: 280px;
+  height: 70px;
+  padding-top: 25px;
+  text-align: right;
+}
+
+#sign {
+  height: 100px;
+  width: 20px;
+  padding-top: 25px;
+}
+
+.flex1 {
+  display: flex;
+}
+
+#number-keys button{
+    border: none;
+}
+
+#number-keys button.change:hover {
+    background-color: green;
+}
+
+#number-keys button:active {
+  border: 1px solid black;
+}
+
+#number-keys button:focus {
+  border: 1px solid black;
+}
